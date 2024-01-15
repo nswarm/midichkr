@@ -68,6 +68,16 @@ jobs:
       # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
+    - uses: actions/upload-artifact@v4
+      with:
+        name: midichkr_linux
+        path: "${{ github.workspace }}/bin/midi"
+        
+    - uses: actions/upload-artifact@v4
+      with:
+        name: midichkr_win
+        path: "${{ github.workspace }}/build/bin/Release/midi.exe"
+
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}
     #   # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
