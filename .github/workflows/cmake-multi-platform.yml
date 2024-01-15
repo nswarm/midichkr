@@ -70,13 +70,10 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: midichkr_linux
-        path: "${{ github.workspace }}/bin/midi"
-        
-    - uses: actions/upload-artifact@v4
-      with:
-        name: midichkr_win
-        path: "${{ github.workspace }}/build/bin/Release/midi.exe"
+        name: "midichkr_${{ matrix.os }}"
+        path: |
+          "${{ steps.strings.outputs.build-output-dir }}/bin/midi"
+          "${{ steps.strings.outputs.build-output-dir }}/bin/Release/midi.exe"
 
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}
