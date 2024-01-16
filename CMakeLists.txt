@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(midi)
+project(midichkr)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -15,5 +15,5 @@ endif ()
 
 add_subdirectory(deps)
 
-add_executable(midi src/main.cpp)
+add_executable(midichkr src/main.cpp)
 target_link_libraries(midi PRIVATE rtmidi fmt::fmt)

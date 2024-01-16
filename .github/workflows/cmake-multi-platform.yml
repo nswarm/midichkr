@@ -71,9 +71,8 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: "midichkr_${{ matrix.os }}"
-        path: |
-          "${{ steps.strings.outputs.build-output-dir }}/bin/midi"
-          "${{ steps.strings.outputs.build-output-dir }}/bin/Release/midi.exe"
+        path: "${{ steps.strings.outputs.build-output-dir }}/bin/midichkr"
+#          "${{ steps.strings.outputs.build-output-dir }}/bin/Release/midichkr.exe"
 
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}

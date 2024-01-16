@@ -11,5 +11,5 @@ Run the `build.sh` script (which just runs cmake) or use cmake directly.
 Find the executable in the `cmake-build` directory depending on platform.
 
 ## Caveats
-Only ever built/tested on windows, ymmv.
+Only ever tested on windows, ymmv.
 
