@@ -16,4 +16,4 @@ endif ()
 add_subdirectory(deps)
 
 add_executable(midichkr src/main.cpp)
-target_link_libraries(midi PRIVATE rtmidi fmt::fmt)
+target_link_libraries(midichkr PRIVATE rtmidi fmt::fmt)
