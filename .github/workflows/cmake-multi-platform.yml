@@ -70,13 +70,13 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: "midichkr-${{ matrix.os }}"
+        name: "${{ matrix.os }}"
         if-no-files-found: ignore
         path: "${{ steps.strings.outputs.build-output-dir }}/bin/midichkr"
 
     - uses: actions/upload-artifact@v4
       with:
-        name: "midichkr-${{ matrix.os }}"
+        name: "${{ matrix.os }}"
         if-no-files-found: ignore
         path: "${{ steps.strings.outputs.build-output-dir }}/bin/Release/midichkr.exe"
 
